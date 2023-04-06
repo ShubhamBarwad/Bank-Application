@@ -1,0 +1,21 @@
+services:
+  Cards:
+    image: shubhambarwad/cards
+    ports:
+      - "8082:8082"
+    networks:
+      - bank-network
+  AccountTest:
+    image: shubhambarwad/accounttest
+    ports:
+      - "8081:8081"
+    networks:
+      - bank-network
+  Loan:
+    image: shubhambarwad/loan
+    ports:
+      - "8083:8083"
+    networks:
+      - bank-
+networks:
+  bank-network: {}
