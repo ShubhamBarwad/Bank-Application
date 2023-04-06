@@ -1,0 +1,15 @@
+services:
+  Insurance:
+    image: sandhya12r/insurance
+    ports:
+      - "8087:8087"
+    networks:
+      - bank-network
+  Cards:
+    image: sandhya12r/cards
+    ports:
+      - "8082:8082"
+    networks:
+      - bank-network
+networks:
+  bank-network: {}
