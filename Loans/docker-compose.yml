@@ -1,0 +1,15 @@
+services:
+  Loans:
+    image: sandhya12r/loans
+    ports:
+      - "9500:9500"
+    networks:
+      - bank-network
+  Accounts:
+    image: sandhya12r/accounts
+    ports:
+      - "8081:8081"
+    networks:
+      - bank-network
+networks:
+  bank-network: {}
